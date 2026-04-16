@@ -163,13 +163,7 @@ class MainActivity : KotlinBaseActivity<ActivityMainBinding>(), TaskScheduler.Ta
                 }
 
                 R.id.menu_settings -> {
-                    MaterialAlertDialogBuilder(this)
-                        .setTitle("使用须知")
-                        .setMessage("本软件完全免费！仅供内部使用！严禁商用或者用作其他非法用途！\r\n近期发现有人在咸鱼私自倒卖本软件，请勿购买！如有购买，请联系卖家退款！")
-                        .setCancelable(false) // 禁止点击外部关闭
-                        .setPositiveButton("知道了") { _, _ ->
-                            navigatePageTo<SettingsActivity>()
-                        }.show()
+                    navigatePageTo<SettingsActivity>()
                 }
             }
             true
